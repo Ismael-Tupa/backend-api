@@ -53,6 +53,9 @@ app.get("/usuario/:id/ventas", verifyToken, (req, res)=>{
     res.json(datos);
 });
 
+//rutas
+app.use(require('./routes/img.routes'));
+
 app.listen(9999, ()=>{
     console.log("Sever run port: 9999");
 });
